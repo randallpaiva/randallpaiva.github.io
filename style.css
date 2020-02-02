@@ -142,29 +142,7 @@ header, section, footer, aside, nav, main, article, figure {
 }
 /* Card Format Ends */
 	
-/* Main Document Formating - Starts */
-	header, 
-	section, 
-	footer, 
-	aside, 
-	nav, 
-	main, 
-	article, 
-	figure {
-		display: block;
-		}
 
-	.header{
-	
-	padding:10px;
-	margin:0px;
-	margin-top:0px;
-	border-radius:15px;
-	
-	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
-	
-	}
-/* Main document formating - Ends */
 /* Start Snippet Style */
 
 	.sm-snippet{
