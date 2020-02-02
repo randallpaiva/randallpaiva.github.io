@@ -5,6 +5,98 @@
 	
 */
 
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+
+/* start - Site Page Loader */
+
+	.spinner{
+		 /* Light grey */
+		border-top: 5px solid #3498db; /* blue  */
+		border-right:5px solid green;
+		border-bottom:5px solid red;
+		border-left:5px solid yellow;
+		border-radius: 50%;
+		width:200px;
+		height:200px;
+		animation:spin 60s linear infinite;
+	}
+	.spinner:hover{
+		 /* Light grey */
+		border-top: 5px solid #3498db; /* blue */
+		border-right: 5px solid green;
+		border-bottom: 5px solid red;
+		border-left: 5px solid yellow;
+		border-radius: 50%;
+		width:200px;
+		height:200px;
+		animation:spin 0.6s linear infinite;
+	}
+	
+	@-webkit-keyframes spin {
+		0%{ transform: rotate(0deg); }
+		25% {transform: rotate(90deg); }
+		50% {transform: rotate (180deg); }
+		75% {transform: rotate (270deg); }
+		100% { transform: rotate(360deg); }
+	}
+	
+	@keyframes spin {
+		0%{ transform: rotate(0deg); }
+		25% {transform: rotate(90deg); }
+		50% {transform: rotate (180deg); }
+		75% {transform: rotate (270deg); }
+		100% { transform: rotate(360deg); }
+	}
+	
+	/* Add animation to "page content" */
+	
+		.animate-bottom	{
+			position:relative;
+			-webkit-animation-name:animatebottom;
+			-webkit-adnimation-duration:1s;
+			animation-name:animatebottom;
+			animation-duration:1s;
+		}
+		
+		@-webkit-keyframes animatebottom{
+			from { bottom:-100px; opacity:0}
+			to { bottom:0px; opacity:1}
+		}
+		
+		@keyframes animatebottom {
+			from{ bottom:-100px; opacity:0}
+			to {bottom:0; opacity:1}
+		}
+		
+		#myDiv{
+			display: none;
+			text-align:center;
+		}
+	
+/* Animate Body */	
+
+		/* The animation code */
+		@keyframes example {
+			0%  {color: red;}
+			25%  {color: yellow;}
+			50%  {color: dodgerblue;}
+			75%  {color: darkgreen;}
+			100% {color: tangerine;}
+		}
+
+		/* The element to apply the animation to */
+		.camilion{
+			
+			color: red;
+			animation-name: example;
+			animation-duration: 60s;
+			animation-iteration-count: infinite;
+		}
+
+	
+/* End - Site Page Loader */
 	body{
 
 		padding:0px;
