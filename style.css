@@ -103,7 +103,46 @@ header, section, footer, aside, nav, main, article, figure {
 		margin:0px;
 		background-color:#ccc;
 	}
+/* Card Format Starts */
 
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+	padding:2px;
+}
+
+.card.title {
+    color: grey;
+    font-size: 18px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.card button:hover, a:hover {
+    opacity: 0.7;
+}
+/* Card Format Ends */
+	
+/* Main Document Formating - Starts */
 	header, 
 	section, 
 	footer, 
@@ -125,7 +164,7 @@ header, section, footer, aside, nav, main, article, figure {
 	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 	
 	}
-
+/* Main document formating - Ends */
 /* Start Snippet Style */
 
 	.sm-snippet{
