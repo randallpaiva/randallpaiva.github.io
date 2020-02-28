@@ -1,39 +1,61 @@
-@charset 'utf-8';
+@charset 'UTF-8';
 
-/* 
-	TechShop Ltd Website - Scripted by Lead Programmer Randall Paiva
-	
-*/
+/* TechShop Ltd Website - Designed by Founder; Randall Paiva - Software Development */
 
-header, section, footer, aside, nav, main, article, figure {
-    display: block;
-}
+
+
+	header,section,footer,aside,nav,main,article,figure {
+		display: block;
+	}
+	body{
+		background-color:#000000;
+	}
+
+/* Start: Font and text formating */
+
+	@font-face{
+		font-family:h3;
+		src:fonts\BASKVILL.tff;
+	}
+	@font-face{
+		font-family:p;
+		src:fonts\BRITANIC.tff;
+	}
+
+/* End: Font and text formating */
 
 /* start - Site Page Loader */
+	
+	.spinner-l{
+		 /* Light grey */
+		border-top: 15px solid #3498db; /* blue  */
+		border-right:15px solid green;
+		border-bottom:15px solid red;
+		border-left:15px solid yellow;
+		border-radius: 50%;
+		width:50px;
+		height:50px;
+		animation:spin 60s linear infinite;
+		position:absolute;
+	}
+	
+/* Light grey */	
 
 	.spinner{
-		 /* Light grey */
 		border-top: 5px solid #3498db; /* blue  */
 		border-right:5px solid green;
 		border-bottom:5px solid red;
 		border-left:5px solid yellow;
 		border-radius: 50%;
-		width:200px;
-		height:200px;
+		width:100px;
+		height:100px;
 		animation:spin 60s linear infinite;
 	}
-	.spinner:hover{
-		 /* Light grey */
-		border-top: 5px solid #3498db; /* blue */
-		border-right: 5px solid green;
-		border-bottom: 5px solid red;
-		border-left: 5px solid yellow;
-		border-radius: 50%;
-		width:200px;
-		height:200px;
-		animation:spin 0.6s linear infinite;
-	}
 	
+	.spinner:hover{
+		animation:spin 1s linear infinite;
+	}
+		
 	@-webkit-keyframes spin {
 		0%{ transform: rotate(0deg); }
 		25% {transform: rotate(90deg); }
@@ -50,263 +72,442 @@ header, section, footer, aside, nav, main, article, figure {
 		100% { transform: rotate(360deg); }
 	}
 	
-	/* Add animation to "page content" */
 	
-		.animate-bottom	{
-			position:relative;
-			-webkit-animation-name:animatebottom;
-			-webkit-adnimation-duration:1s;
-			animation-name:animatebottom;
-			animation-duration:1s;
-		}
+/* Navbar Collapse Starts */
+	
+		.navbar-nav.nav-item{
 		
-		@-webkit-keyframes animatebottom{
-			from { bottom:-100px; opacity:0}
-			to { bottom:0px; opacity:1}
 		}
+		.menu-bar {
+			width: 25px;
+			height: 3px;
+			background-color:#ccc;
+			margin: 5px 0px;
+		}
+	
+/* Navbar Collapse Ends */
+	
+/* Add animation to "page content" */
+	
+	.animate-bottom	{
+		position:relative;
+		-webkit-animation-name:animatebottom;
+		-webkit-adnimation-duration:1s;
+		animation-name:animatebottom;
+		animation-duration:1s;
+	}
 		
-		@keyframes animatebottom {
-			from{ bottom:-100px; opacity:0}
-			to {bottom:0; opacity:1}
-		}
-		
-		#myDiv{
-			display: none;
-			text-align:center;
-		}
+	@-webkit-keyframes animatebottom{
+		from { bottom:-100px; opacity:0}
+		to { bottom:0px; opacity:1}
+	}
+	
+	@keyframes animatebottom {
+		from{ bottom:-100px; opacity:0}
+		to {bottom:0; opacity:1}
+	}
+	
+	#myDiv{
+		display: none;
+		text-align:center;
+	}
 	
 /* Animate Body */	
 
-		/* The animation code */
-		@keyframes example {
-			0%  {color: red;}
-			25%  {color: yellow;}
-			50%  {color: dodgerblue;}
-			75%  {color: darkgreen;}
-			100% {color: tangerine;}
-		}
+/* The animation code */
+	@keyframes example {
+		0%  {color: red;}
+		25%  {color: orange;}
+		50%  {color: dodgerblue;}
+		75%  {color: darkgreen;}
+		100% {color: tangerine;}
+	}
 
-		/* The element to apply the animation to */
-		.camilion{
-			
-			color: red;
-			animation-name: example;
-			animation-duration: 60s;
-			animation-iteration-count: infinite;
-		}
-
+/* The element to apply the animation to */
+		
+	.camilion{
+		
+		color: red;
+		animation-name: example;
+		animation-duration: 60s;
+		animation-iteration-count: infinite;
+	}
 	
 /* End - Site Page Loader */
-	body{
 
-		padding:0px;
-		margin:0px;
-		background-color:#ccc;
-	}
+
+
 /* Card Format Starts */
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-	padding:2px;
-}
-
-.card.title {
-    color: grey;
-    font-size: 18px;
-}
-
-.card button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.card a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
-}
-
-.card button:hover, a:hover {
-    opacity: 0.7;
-}
-/* Card Format Ends */
 	
-
-/* Start Snippet Style */
-
-	.sm-snippet{
-		padding:15px 5px 15px 5px;
-		margin:auto;
-		width:65%;
-		text-align:center;
-		height:auto;border-top:1px dashed #000;
-		border-bottom:1px solid #5a6acd;
-		text-align:center;
-		}
-	.sm-snippet h2 {
-		width:100%;
-		height:auto;
-		border-top:1px solid rgb(255, 0, 0);
-		border-bottom:3px solid rgb(255, 0, 0);
-		text-align:center;
+	.card,.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8,.card9,.card10{
+		background-color:#fff;
 	}
-
-	.navbar-toggle{
-	text-align:center;
-	}
-
-	.logo{
-	width:60px;
-	height:60px;
-	}
-
-/* Colors for headings */
-
-	.red{
-		
-		background-color:#ff0000;
+	.card {
+		box-shadow: 0 2px 6px 0 rgba(0.1, 0.1, 0.1, 0.1);
 		width:auto;
 		height:auto;
+		margin:0px;
+		border-top:10px solid tangarin;
+		
+	}
+
+	.card.title {
+		color: grey;
+		font-size: 18px;
+	}
+
+	.card p {
+		color: grey;
+		width:auto;
+		font-size: 18px;
+		padding:10px 30px 10px 30px;
+		word-spacing:5px;
+	}
+
+	.card h2{
+		background: linear-gradient(to top right, #66B032 5%, #347C98 65%);
+		color:#fff;
+		border-radius:5px;
+		text-indent:10px;
+		padding:2px;
+	}
+	.header{
+		padding:2px;
+		font-size:8vw;
+		display:block;
+	}
+
+	
+	
+/* Card2 formatting */
+	
+	.card2 {
+		width:auto;
+		height:auto;
+		margin:0px;
+		padding:2px 5px 2px 5px;
+		border-radius:5px;
+		border-top:10px solid #FE2712;
+		text-overflow:wrap;	
+		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
+	
+	}
+
+	.card2 h2 {
+		color: grey;
+		font-size:2mv;
+	}
+
+/* Card3 formatting */
+
+	.card3 {
+		
+		width: auto;
+		height:auto;
+		margin:0px;
+		padding:2px 5px 2px 5px;
+		border-radius:5px;
+		border-top:10px solid #FC600A;
+		text-overflow:wrap;	
+		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
+	}
+
+	.card3 h2 {
+		color: grey;
+		font-size:2mv;
+	}
+	
+/* Card4 formatting */
+
+	.card4 {
+		
+		width: auto;
+		height:auto;
+		margin:0px;
+		padding:2px 5px 2px 5px;
+		border-radius:5px;
+		border-top:10px solid #FB9902;
+		text-overflow:wrap;	
+		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
+	}
+
+	.card4 h2 {
+		color: grey;
+		font-size:2mv;
+	}
+	
+/* Card5 formatting */
+
+	.card5 {
+		
+		width: auto;
+		height:auto;
+		margin:0px;
+		padding:2px 5px 2px 5px;
+		border-radius:5px;
+		border-top:10px solid #FCCC1A;
+		text-overflow:wrap;	
+		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
+	}
+
+	.card5 h2 {
+		color: grey;
+		font-size:2mv;
+	}
+	
+/* Card6 formatting */
+	.card6 {
+		
+		width: auto;
+		height:auto;
+		margin:0px;
+		padding:2px 5px 2px 5px;
+		border-radius:5px;
+		border-top:10px solid #FEFE33;
+		text-overflow:wrap;	
+		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
+	}
+
+	.card6 h2 {
+		color: grey;
+		font-size:2mv;
+	}	
+	
+/* Card7 formatting */
+	
+	.card7{
+		
+		width: auto;
+		height:auto;
+		margin:0px;
+		padding:2px 5px 2px 5px;
+		border-radius:5px;
+		border-top:10px solid #B2D732;
+		text-overflow:wrap;	
+		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
+	}
+/* Card8 formatting */
+	
+	.card8{
+		
+		width: auto;
+		height:auto;
+		margin:0px;
+		padding:2px 5px 2px 5px;
+		border-radius:5px;
+		border-top:10px solid #66B032;
+		text-overflow:wrap;	
+		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
+	}
+/* Card9 formatting */
+	
+	.card9{
+		
+		width: auto;
+		height:auto;
+		margin:0px;
+		padding:2px 5px 2px 5px;
+		border-radius:5px;
+		border-top:10px solid #347C98;
+		text-overflow:wrap;	
+		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
+	}
+	
+/* Card9 formatting */
+	
+	.card10{
+		
+		width: auto;
+		height:auto;
+		margin:0px;
+		padding:2px 5px 2px 5px;
+		border-radius:5px;
+		border-top:10px solid #0247FE;
+		text-overflow:wrap;	
+		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
+	}
+	
+/* Card Format Ends */
+
+
+/* Nav link bar starts*/
+
+	.navbar-nav{
+	
+		text-align:center;
+	}
+
+	li.nav-item a{
+	
+		padding:6px;
+		margin-left:10px;
+		text-decoration:none;
+		border-radius:5px;
+		text-align:center;
+	}
+
+/* Ends link bar */
+
+
+
+/* Start: Link Hover Styles */
+
+	li.nav-item a:hover{
+		
+		border-color:red ;
+		border-width:1px dashed;
+		
+	}
+	li.nav-item a:active{
+		
+		background-color:#ccc;
+		border-color:lime 1px dashed;
+	}
+	
+/* End: Link Hover Styles */
+
+	
+
+/* Nav link bar ends */
+
+	.header{
+	
+			padding:10px;
+			margin:0px;
+			margin-top:0px;
+			border-radius:15px;
+	
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+	}
+	
+	.logo{
+		width:60px;
+		height:60px;
+	}
+	
+	.center{
+		width:50%;
+		margin:auto;
+	}
+	
+/* Colors for headings */
+
+	.indigo{
+		background-color:indigo;
+		color:#fff;
+		
 	}
 	.orange{
+		background-color:orange;
 		
-		color:orange;
 	}
 	.yellow{
 		
-		color:yellow;
+		background-color:yellow;
+	}
+	.bg-space{
+		padding:90px 0px 90px 0px;
+		
 	}
 
-	ul li{
-	display:inline-table;
-	padding-right:5px;
-	padding-left:20px;
-	Float:right;
-	}
-
-/* Colors for backgrounds */
-
-	.bg-lightblue{
-		background-color:#6a5acd;
-		width:auto;
-		height:auto;
-	}
-
+	
 /* Links & Rollovers */
 
 	a:hover{
-	
-	text-decoration:no-underline;
-	
+		text-decoration:no-underline;
 	}
+	
 	a:active{
-	
-	text-decoration:no-underline;
-	
+		text-decoration:no-underline;
 	}
+	
 	a:link{
-		
-	text-decoration:no-underline;	
-		
+		text-decoration:no-underline;	
 	}
 
 /* Links & Rollovers Ends */
 
 	#myDIV {
-    width: 100%;
-    height: 250px;
-    background: red;
-    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
-    animation: mymove 5s infinite;
+		width: 100%;
+		height: 250px;
+		background: red;
+		-webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+		animation: mymove 5s infinite;
 
 
 /* Chrome, Safari, Opera */
 	
 	@-webkit-keyframes mymove {
-    from {background-color: red;}
-    to {background-color: blue;}
+		from {background-color: red;}
+		to {background-color: blue;}
 	}
 
 /* Standard syntax */
 	
 	@keyframes mymove {
-    from {background-color: red;}
-    to {background-color: blue;}
+		from {background-color: red;}
+		to {background-color: blue;}
 	}
 
 
 /* Added from Side Navbar */
 
 
-
-
-	/* The side navigation menu */
-
+/* The side navigation menu */
+	
 	.sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+		height: 100%; /* 100% Full-height */
+		width: 0; /* 0 width - change this with JavaScript */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Stay on top */
+		top: 0; /* Stay at the top */
+		left: 0;
+		background-color: #111; /* Black*/
+		overflow-x: hidden; /* Disable horizontal scroll */
+		padding-top: 60px; /* Place content 60px from the top */
+		transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 	}
 
 /* The navigation menu links */
-	
+
 	.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 25px;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
 	}
 
 /* When you mouse over the navigation links, change their color */
 	
 	.sidenav a:hover {
-    color: #f1f1f1;
+		color: #f1f1f1;
 	}
 
 /* Position and style the close button (top right corner) */
 	
 	.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
 	}
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 	
 	#main {
-    transition: margin-left .5s;
-    padding: 20px;
-}
+		transition: margin-left .5s;
+		padding: 20px;
+	}
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-
-	@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-	}
 	
+	@media screen and (max-height: 450px) {
+		.sidenav {padding-top: 15px;}
+		.sidenav a {font-size: 18px;}
+	}		
 /* Add Colors */
 
 	.indigo{
@@ -322,32 +523,25 @@ header, section, footer, aside, nav, main, article, figure {
 
 /* End of Add Colors */
 
-/* Menu Bar Starts */
+/* Snippets Starts */
 
-
-
-/* Menu Bar Ends */
-
-
-
-
-	#page{
-	
-	background-color:#ccc;
-	border-radius:25px;
-	
+	.sm-box{
+		margin:auto;
+		background-color:#ccc;
+		padding:auto;
+		height:300px;
+		width:300px;
+		border-left-color:#ff0000 1px;
+		
 	}
-	
-	.header{
-	
-	background-color:#ccc;
-	padding:20px;
-	margin:10px;
-	}
+
+/* Snippet Bar Ends */
 	
 	.footer{
 		
-	color:#000000;
-	text-align:center;
-	
-}
+		color:#fff;
+		text-align:center;
+	}
+	.footer p{
+		color:#ffffff;
+	}
