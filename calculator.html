@@ -1,0 +1,164 @@
+<!DOCtype html>
+<html>
+<head>
+  <title>Calculator Code :: By Randall Paiva</title>
+ 
+<style>
+
+	.calculator{
+	
+		border-radius:5px;
+		box-shadow:3px 5px 5px 0px;
+		background-color:orange;
+	}
+	.ans{
+	
+		background-color:#fff;
+		border-radius:5px;
+	
+	}
+
+</style>
+  
+  
+</head>
+<body bgcolor="#ccc">
+ 
+ <table width="300" class="calculator" cellspacing="5" cellpadding="5" border="0" bgcolor="#fff" align="center">
+    <tr>
+ 
+      <td align="center" colspan="4"><h2>Calculator Code Test</h2></td>
+    </tr>
+    <tr>
+      <td class="ans" align="center" colspan="4"><h3>Answer:<br/><div id="demo"></div></td></h3>
+    </tr>
+    <tr>
+        <td align="center" colspan="4">
+        <form name="myForm">
+        
+			Num(CubeRoot):<input type="number" name="num1" maxlength="25" required>
+			<br>
+			Pow(SquareRoot):<input type="number" name="num2" maxlength="25" required>
+			<br/>
+		</form>
+        </td>
+    </tr>
+	
+    <tr align="center">
+        <td><button type="button" onclick="Plus('x,y')">Add</button></td>
+        <td><button type="button" onclick="Sub('x,y')">Subtract</button></td>
+	</tr>
+	<tr  align="center">
+		<td><button type="button" onclick="Mul('x,y')">Multiply</button></td>
+        <td><button type="button" onclick="Div('x,y')">Divide</button></td>
+	</tr>
+	<tr align="center">
+		<td><button type="button" onclick="CRoot('x')">CubeRoot</button></td>
+		<td><button type="button" onclick="SRoot('x')">SquareRoot</button></td>
+        
+        <br/>
+    </tr>
+    <tr align="center">
+        <td colspan="4">
+		<button type="button" onclick="alert('Hi, I am Randall. Since I am familiar with PHP 6 Only, it took me a whole day to quickly familiarize the Javascript syntax and the Math objects. I hope I get into be a part of the Switch Maven DevOps Team!')">Credits</button>
+        </td>
+    </tr>
+    
+	
+  </table>
+      
+    <script>
+    
+    // This function is for addition of the numbers
+      
+        function Plus(){
+          
+          var x = document.forms["myForm"]["num1"].value;
+        
+          var y = document.forms["myForm"]["num2"].value;
+		  
+    // Math.abs returns the absolute numerical value of the variable.
+	
+          var z = Math.abs(x) + Math.abs(y);
+		  
+		  document.getElementById("demo").innerHTML = z;
+       
+        }
+        
+    // This function is for subtraction of the numbers
+        
+        function Sub(){
+          
+          var x = document.forms["myForm"]["num1"].value;
+        
+          var y = document.forms["myForm"]["num2"].value;
+          
+          var z = Math.abs(x) - Math.abs(y);
+          
+          document.getElementById("demo").innerHTML = z;
+         
+        }
+        
+    // This function is for multiplication of the numbers
+        
+        function Mul(){
+          
+          var x = document.forms["myForm"]["num1"].value;
+        
+          var y = document.forms["myForm"]["num2"].value;
+          
+          var z = Math.abs(x) * Math.abs(y);
+          
+          document.getElementById("demo").innerHTML = z;
+       
+        }
+        
+    // This function is for Division of the numbers
+        
+        function Div(){
+          
+          var x = document.forms["myForm"]["num1"].value;
+        
+          var y = document.forms["myForm"]["num2"].value;
+          
+          var z = Math.abs(x) / Math.abs(y);
+          
+          document.getElementById("demo").innerHTML = z;
+         
+        }
+	
+	// This function is for CubeRoot of the numbers
+        
+        function CRoot(){
+          
+          var x = document.forms["myForm"]["num1"].value;
+        
+          var z = Math.cbrt(x);
+          
+          document.getElementById("demo").innerHTML = z;
+         
+        }
+	
+	// This function is for SquareRoot of the numbers
+        
+        function SRoot(){
+          
+          var y = document.forms["myForm"]["num2"].value;
+        
+          var z = Math.sqrt(y);
+          
+          document.getElementById("demo").innerHTML = z;
+         
+        }
+		
+        
+        
+        
+    </script>
+    
+    
+    
+    
+
+</body>
+</html>
