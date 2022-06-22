@@ -28,14 +28,14 @@
 	
 	.spinner-l{
 		 /* Light grey */
-		border-top: 15px solid #3498db; /* blue  */
-		border-right:15px solid green;
-		border-bottom:15px solid red;
-		border-left:15px solid yellow;
+		border-top: 7px solid #3498db; /* blue  */
+		border-right:7px solid green;
+		border-bottom:7px solid red;
+		border-left:7px solid yellow;
 		border-radius: 50%;
 		width:50px;
 		height:50px;
-		animation:spin 60s linear infinite;
+		animation:spin 120s linear infinite;
 		position:absolute;
 	}
 	
@@ -49,11 +49,11 @@
 		border-radius: 50%;
 		width:100px;
 		height:100px;
-		animation:spin 60s linear infinite;
+		animation:spin 120s linear infinite;
 	}
 	
 	.spinner:hover{
-		animation:spin 1s linear infinite;
+		animation:spin 3s linear infinite;
 	}
 		
 	@-webkit-keyframes spin {
@@ -141,13 +141,15 @@
 	
 	.card,.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8,.card9,.card10{
 		background-color:#fff;
+		box-shadow: 10px 5px 10px 5px rgba(0.1, 0.1, 0.1, 0.1);
+		
 	}
 	.card {
 		box-shadow: 0 2px 6px 0 rgba(0.1, 0.1, 0.1, 0.1);
 		width:auto;
 		height:auto;
 		margin:0px;
-		border-top:10px solid tangarin;
+		border-top:5px solid tangarin;
 		
 	}
 
@@ -187,7 +189,7 @@
 		margin:0px;
 		padding:2px 5px 2px 5px;
 		border-radius:5px;
-		border-top:10px solid #FE2712;
+		border-top:5px solid #FE2712;
 		text-overflow:wrap;	
 		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
 	
@@ -207,7 +209,7 @@
 		margin:0px;
 		padding:2px 5px 2px 5px;
 		border-radius:5px;
-		border-top:10px solid #FC600A;
+		border-top:5px solid #FC600A;
 		text-overflow:wrap;	
 		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
 	}
@@ -226,7 +228,7 @@
 		margin:0px;
 		padding:2px 5px 2px 5px;
 		border-radius:5px;
-		border-top:10px solid #FB9902;
+		border-top:5px solid #FB9902;
 		text-overflow:wrap;	
 		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
 	}
@@ -245,7 +247,7 @@
 		margin:0px;
 		padding:2px 5px 2px 5px;
 		border-radius:5px;
-		border-top:10px solid #FCCC1A;
+		border-top:5px solid #FCCC1A;
 		text-overflow:wrap;	
 		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
 	}
@@ -263,7 +265,7 @@
 		margin:0px;
 		padding:2px 5px 2px 5px;
 		border-radius:5px;
-		border-top:10px solid #FEFE33;
+		border-top:5px solid #FEFE33;
 		text-overflow:wrap;	
 		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
 	}
@@ -282,7 +284,7 @@
 		margin:0px;
 		padding:2px 5px 2px 5px;
 		border-radius:5px;
-		border-top:10px solid #B2D732;
+		border-top:5px solid #B2D732;
 		text-overflow:wrap;	
 		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
 	}
@@ -295,7 +297,7 @@
 		margin:0px;
 		padding:2px 5px 2px 5px;
 		border-radius:5px;
-		border-top:10px solid #66B032;
+		border-top:5px solid #66B032;
 		text-overflow:wrap;	
 		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
 	}
@@ -308,7 +310,7 @@
 		margin:0px;
 		padding:2px 5px 2px 5px;
 		border-radius:5px;
-		border-top:10px solid #347C98;
+		border-top:5px solid #347C98;
 		text-overflow:wrap;	
 		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
 	}
@@ -322,7 +324,7 @@
 		margin:0px;
 		padding:2px 5px 2px 5px;
 		border-radius:5px;
-		border-top:10px solid #0247FE;
+		border-top:5px solid #0247FE;
 		text-overflow:wrap;	
 		box-shadow: 0 1px 2px 0 rgba(0.1, 0.1, 0.1, 0.1);
 	}
@@ -538,9 +540,11 @@
 /* Snippet Bar Ends */
 	
 	.footer{
-		
+		background-color:#000;
 		color:#fff;
 		text-align:center;
+		width:100%;
+		font-size:10px;
 	}
 	.footer p{
 		color:#ffffff;
