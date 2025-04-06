@@ -127,7 +127,7 @@
 		
 	.camilion{
 		
-		color: red;
+		background-color: red;
 		animation-name: example;
 		animation-duration: 60s;
 		animation-iteration-count: infinite;
